@@ -386,7 +386,7 @@ p.lede {
 .image-band__content { padding-block: 72px; }
 .image-band h2 { max-width: 16ch; }
 .page-hero {
-  padding-block: 56px;
+  padding-block: 0;
   border-bottom: 1px solid var(--line);
 }
 .page-hero--image {
@@ -399,6 +399,7 @@ p.lede {
   background: var(--ink);
 }
 .page-hero--image .lede { color: #f4f0e8; max-width: 54ch; }
+.page-hero--image .wrap { padding-block: 48px; }
 .prose { max-width: 68ch; }
 .prose p { margin-bottom: 1.4em; }
 
