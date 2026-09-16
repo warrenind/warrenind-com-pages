@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact · Warren Industries, Inc.</title>
+  <meta name="description" content="Get in touch with Warren Industries, Inc.">
+  <link rel="icon" href="/images/original/wilogo-trans.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+  <div class="wrap site-header__row">
+    <a class="brand" href="/">
+      <img class="brand__wordmark" src="/images/original/WI-top-logo&text.png" alt="Warren Industries, Inc.">
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/about/">About</a></li>
+        
+        <li><a href="/contact/">Contact</a></li>
+        
+        <li class="site-nav__divisions">
+          <span class="site-nav__divisions-label" tabindex="0">Our companies</span>
+          <ul class="site-nav__submenu">
+            
+            <li><a href="https://www.warrenknight.com" target="_blank" rel="noopener">Warren-Knight Instrument Company</a></li>
+            
+            <li><a href="https://www.nasurvey.com" target="_blank" rel="noopener">North American Survey Supply</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="page-hero page-hero--image">
+  <img src="/images/original/manufacturing-floor.jpg" alt="Warren Industries manufacturing floor with precision machining equipment">
+  <div class="wrap">
+    <p class="hero__eyebrow">Get in touch</p>
+    <h1>Drop us a line.</h1>
+    <p class="lede">Tell us what you are trying to align, measure, manufacture, or source.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap contact-grid">
+    <form id="contact-form" class="contact-mail">
+      <p class="section__kicker">Email us directly</p>
+      <h2>Start a conversation.</h2>
+      <p>Build your message below. When you send it, your default mail program will open with the completed draft.</p>
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+      <div class="field">
+        <label for="company">Company</label>
+        <input id="company" name="company" type="text">
+      </div>
+      <div class="field">
+        <label for="message">What are you working on?</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button class="btn btn--brass" type="submit">Mail with your default mail program</button>
+      <p class="contact-mail__address"><a href="mailto:accuracy@warrenind.com">accuracy@warrenind.com</a></p>
+    </form>
+
+    <div>
+      <h2>Direct contact</h2>
+      <dl class="contact-details">
+        <dt>Phone</dt>
+        <dd><a href="tel:+12154649300">(215) 464-9300</a></dd>
+        <dt>Fax</dt>
+        <dd>(215) 464-9303</dd>
+        <dt>Email</dt>
+        <dd><a href="mailto:accuracy@warrenind.com">accuracy@warrenind.com</a></dd>
+        <dt>Address</dt>
+        <dd>2045 Bennett Road, Philadelphia, PA 19116</dd>
+        <dt>Warren-Knight Instrument Company</dt>
+        <dd><a href="https://www.warrenknight.com" target="_blank" rel="noopener">warrenknight.com</a></dd>
+        <dt>North American Survey Supply</dt>
+        <dd><a href="https://www.nasurvey.com" target="_blank" rel="noopener">nasurvey.com</a></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelector("#contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const name = form.get("name");
+    const email = form.get("email");
+    const company = form.get("company") || "Not provided";
+    const message = form.get("message");
+    const body = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      `Company: ${company}`,
+      "",
+      message
+    ].join("\n");
+    const mailto = "mailto:accuracy@warrenind.com"
+      + "?subject=" + encodeURIComponent("Warren Industries inquiry")
+      + "&body=" + encodeURIComponent(body);
+    window.location.href = mailto;
+  });
+</script>
+
+  </main>
+  <footer class="site-footer">
+  <div class="wrap site-footer__grid">
+    <div>
+      <div class="brand brand--footer">
+        <img class="brand__mark" src="/images/original/wilogo-trans.png" alt="">
+        <span class="brand__name">Warren Industries</span>
+      </div>
+      <p class="site-footer__about">
+        Warren Industries, Inc. and its divisions provide reliable, accurate optical
+        and electronic alignment systems from Philadelphia, Pennsylvania.
+      </p>
+    </div>
+
+    <div>
+      <h2 class="site-footer__heading">Our companies</h2>
+      <ul class="site-footer__list">
+        
+        <li><a href="https://www.warrenknight.com" target="_blank" rel="noopener">Warren-Knight Instrument Company</a></li>
+        
+        <li><a href="https://www.nasurvey.com" target="_blank" rel="noopener">North American Survey Supply</a></li>
+        
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="site-footer__heading">Site</h2>
+      <ul class="site-footer__list">
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/about/">About</a></li>
+        
+        <li><a href="/contact/">Contact</a></li>
+        
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="site-footer__heading">Contact</h2>
+      <ul class="site-footer__list">
+        <li>(215) 464-9300</li>
+        <li>(215) 464-9303</li>
+        <li><a href="mailto:accuracy@warrenind.com">accuracy@warrenind.com</a></li>
+        <li>2045 Bennett Road, Philadelphia, PA 19116</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap site-footer__bottom">
+    <span>&copy; 2026 Warren Industries, Inc.</span>
+  </div>
+</footer>
+
+</body>
+</html>
